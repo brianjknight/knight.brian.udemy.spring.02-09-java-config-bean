@@ -1,16 +1,14 @@
 package knight.brian.springcoredemo.common;
 
-import org.springframework.stereotype.Component;
+// Not using @Component annotation
+public class SwimCoach implements Coach {
 
-@Component
-public class CricketCoach implements Coach {
-
-    public CricketCoach() {
+    public SwimCoach () {
         System.out.println("In constructor: " + getClass().getSimpleName());
     }
 
     @Override
     public String getDailyWorkout() {
-        return "Practice fast bowling for 15 minutes.";
+        return "Swim 1000 meters to warm up.";
     }
 }
